@@ -285,8 +285,10 @@
     }
     if (is_blank($salesperson['phone'])) {
       $errors[] = "Phone cannot be blank.";
-    } elseif (!has_length($salesperson['phone'], array('max' => 10))) {
+    } elseif (!has_length($salesperson['phone'], array('max' => 12))) {
       $errors[] = "Phone cannot be more than 10 digits.";
+    }elseif (!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $salesperson['phone'])){
+      $errors[] = "Phone number 000-000-0000 format.";
     }
 
     if (is_blank($salesperson['email'])) {
@@ -425,6 +427,8 @@
       $errors[] = "Username cannot be blank.";
     } elseif (!has_length($user['username'], array('max' => 255))) {
       $errors[] = "Username must be less than 255 characters.";
+    }elseif (!preg_match('/^[a-zA-Z0-9_]+$/',$user['username'])){
+      $errors[] = "Username can only have alphanumeric and underscores.";
     }
     return $errors;
   }

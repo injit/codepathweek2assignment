@@ -34,7 +34,7 @@ The following **required** functionality is completed:
 7\. [√]  Required: Add Data Validations
 * [√]  Required: Validate that no values are left blank.
 * [√]  Required: Validate that all string values are less than 255 characters.
-* [ ]  Required: Validate that usernames contain only the whitelisted characters.
+* [√]  Required: Validate that usernames contain only the whitelisted characters.
 * [ ]  Required: Validate that phone numbers contain only the whitelisted characters.
 * [ ]  Required: Validate that email addresses contain only whitelisted characters.
 * [ ]  Required: Add *at least 5* other validations of your choosing.
